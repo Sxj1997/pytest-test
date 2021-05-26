@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="3" skipped="0" tests="3" time="24.435" timestamp="2021-04-29T16:15:04.676636" hostname="DESKTOP-F2GH32K"><testcase classname="test_dir.test_01_login.TestLogin" name="test_login" time="10.851"><failure message="assert False">self = &lt;test_dir.test_01_login.TestLogin object at 0x00000271530F67C0&gt;
+
+    def test_login(self):
+        page=LoginPage(Common.driver)
+        page.open(Common.url)
+        page.password_clear()
+        page.name_clear()
+        page.name_input("test1")
+        page.password_input("123123")
+        sleep(1)
+        page.login()
+        sleep(5)
+        result = page.is_exist()
+&gt;       assert result
+E       assert False
+
+test_dir\test_01_login.py:18: AssertionError</failure></testcase><testcase classname="test_dir.test_02_addCustormer.TestAddCustorner" name="test_openBasic" time="5.283"><failure message="selenium.common.exceptions.TimeoutException: Message:">self = &lt;test_dir.test_02_addCustormer.TestAddCustorner object at 0x00000271530F60D0&gt;
+
+    def test_openBasic(self):
+        page=HomePage(Common.driver)
+&gt;       page.clickBasicManagement()
+
+test_dir\test_02_addCustormer.py:24: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+page\homePage.py:9: in clickBasicManagement
+    self.by_xpath('/html/body/section/section/aside/ul/li[1]/div').click()
+base\base.py:33: in by_xpath
+    return WebDriverWait(self.driver, time, 1).until(EC.visibility_of_element_located((By.XPATH, xpath)))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;selenium.webdriver.support.wait.WebDriverWait (session="ee86b10ece857226aaab0a8f3731a672")&gt;, method = &lt;selenium.webdriver.support.expected_conditions.visibility_of_element_located object at 0x000002715318A580&gt;, message = ''
+
+    def until(self, method, message=''):
+        """Calls the method provided with the driver as an argument until the \
+        return value is not False."""
+        screen = None
+        stacktrace = None
+    
+        end_time = time.time() + self._timeout
+        while True:
+            try:
+                value = method(self._driver)
+                if value:
+                    return value
+            except self._ignored_exceptions as exc:
+                screen = getattr(exc, 'screen', None)
+                stacktrace = getattr(exc, 'stacktrace', None)
+            time.sleep(self._poll)
+            if time.time() &gt; end_time:
+                break
+&gt;       raise TimeoutException(message, screen, stacktrace)
+E       selenium.common.exceptions.TimeoutException: Message:
+
+..\..\anaconda3\lib\site-packages\selenium\webdriver\support\wait.py:80: TimeoutException</failure></testcase><testcase classname="test_dir.test_02_addCustormer.TestAddCustorner" name="test_addCustormer" time="6.062"><failure message="selenium.common.exceptions.TimeoutException: Message:">self = &lt;test_dir.test_02_addCustormer.TestAddCustorner object at 0x00000271531CC820&gt;
+
+    def test_addCustormer(self):
+        page=CustormerAdd(Common.driver)
+        sleep(3)
+&gt;       page.legelRepresentative('测试A')
+
+test_dir\test_02_addCustormer.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+page\custormerAddPage.py:9: in legelRepresentative
+    self.by_xpath('/html/body/section/section/main/div[2]/div[2]/form/div[1]/div[2]/div[1]/input').send_keys(keys)
+base\base.py:33: in by_xpath
+    return WebDriverWait(self.driver, time, 1).until(EC.visibility_of_element_located((By.XPATH, xpath)))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;selenium.webdriver.support.wait.WebDriverWait (session="ee86b10ece857226aaab0a8f3731a672")&gt;, method = &lt;selenium.webdriver.support.expected_conditions.visibility_of_element_located object at 0x00000271531CCC10&gt;, message = ''
+
+    def until(self, method, message=''):
+        """Calls the method provided with the driver as an argument until the \
+        return value is not False."""
+        screen = None
+        stacktrace = None
+    
+        end_time = time.time() + self._timeout
+        while True:
+            try:
+                value = method(self._driver)
+                if value:
+                    return value
+            except self._ignored_exceptions as exc:
+                screen = getattr(exc, 'screen', None)
+                stacktrace = getattr(exc, 'stacktrace', None)
+            time.sleep(self._poll)
+            if time.time() &gt; end_time:
+                break
+&gt;       raise TimeoutException(message, screen, stacktrace)
+E       selenium.common.exceptions.TimeoutException: Message:
+
+..\..\anaconda3\lib\site-packages\selenium\webdriver\support\wait.py:80: TimeoutException</failure></testcase></testsuite></testsuites>

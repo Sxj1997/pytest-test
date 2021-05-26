@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c4a46d04-a9b1-4d64-8e11-cac9499282e7" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1rTLIpe5szc9hzzJJ4RBlaYVrAY" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c4a46d04-a9b1-4d64-8e11-cac9499282e7" name="Default Changelist" comment="" />
+      <created>1618995055123</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1618995055123</updated>
+      <workItem from="1618995056931" duration="2253000" />
+      <workItem from="1618997887427" duration="1544000" />
+      <workItem from="1619077827938" duration="6086000" />
+      <workItem from="1619148273555" duration="3257000" />
+      <workItem from="1619161113095" duration="2872000" />
+      <workItem from="1619319783379" duration="544000" />
+      <workItem from="1619320380207" duration="11115000" />
+      <workItem from="1619403020725" duration="18289000" />
+      <workItem from="1620453579934" duration="1583000" />
+      <workItem from="1621321490791" duration="1193000" />
+      <workItem from="1622021049184" duration="659000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2610" y="290" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1619344760165">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2610" y="290" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1858.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1619344760165" />
+    <state x="2383" y="185" key="SettingsEditor" timestamp="1619160741648">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2383" y="185" key="SettingsEditor/0.0.1858.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1619160741648" />
+  </component>
+</project>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="3" time="34.028" timestamp="2021-04-29T16:45:54.450033" hostname="DESKTOP-F2GH32K"><testcase classname="test_dir.test_01_login.TestLogin" name="test_login" time="14.151" /><testcase classname="test_dir.test_02_addCustormer.TestAddCustorner" name="test_openBasic" time="5.592" /><testcase classname="test_dir.test_02_addCustormer.TestAddCustorner" name="test_addCustormer" time="13.689"><failure message="selenium.common.exceptions.TimeoutException: Message:">self = &lt;test_dir.test_02_addCustormer.TestAddCustorner object at 0x0000019E1A7D1220&gt;
+
+    def test_addCustormer(self):
+        page=CustormerAdd(Common.driver)
+        sleep(3)
+        page.legelRepresentative('测试A')
+        page.bankAccount('123456789009876')
+        page.openAccount('中国银行')
+        page.socialCreditCode('123456789')
+        page.companyName('自动化测试')
+        page.province()
+        page.city()
+        page.area()
+        page.people('带阿达')
+        page.department('测试')
+        page.phoneNumber('15315560987')
+        page.password('123123')
+        page.references()
+        sleep(1)
+&gt;       page.clickPicture(file='C:\\Users\\Sxj\\Desktop\\1.jpg')
+
+test_dir\test_02_addCustormer.py:46: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+page\custormerAddPage.py:56: in clickPicture
+    self.by_xpath('/html/body/section/section/main/div[2]/div[2]/form/div[17]/div[2]/div/div/input').send_keys(file)
+base\base.py:33: in by_xpath
+    return WebDriverWait(self.driver, time, 1).until(EC.visibility_of_element_located((By.XPATH, xpath)))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;selenium.webdriver.support.wait.WebDriverWait (session="2fdabc1ab17906138ef65bf2f0f28a3d")&gt;, method = &lt;selenium.webdriver.support.expected_conditions.visibility_of_element_located object at 0x0000019E1A7D17C0&gt;, message = ''
+
+    def until(self, method, message=''):
+        """Calls the method provided with the driver as an argument until the \
+        return value is not False."""
+        screen = None
+        stacktrace = None
+    
+        end_time = time.time() + self._timeout
+        while True:
+            try:
+                value = method(self._driver)
+                if value:
+                    return value
+            except self._ignored_exceptions as exc:
+                screen = getattr(exc, 'screen', None)
+                stacktrace = getattr(exc, 'stacktrace', None)
+            time.sleep(self._poll)
+            if time.time() &gt; end_time:
+                break
+&gt;       raise TimeoutException(message, screen, stacktrace)
+E       selenium.common.exceptions.TimeoutException: Message:
+
+..\..\anaconda3\lib\site-packages\selenium\webdriver\support\wait.py:80: TimeoutException</failure></testcase></testsuite></testsuites>
