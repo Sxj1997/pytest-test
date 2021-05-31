@@ -23,7 +23,7 @@ class Common():
     url="http://train-cabin.dev.thundersdata.com/login"
 
     #dirver_type
-    driver_type="chrome"
+    driver_type="chrome-headless"
 
     #定义driver
     driver=None
