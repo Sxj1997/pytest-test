@@ -12,11 +12,11 @@ class BasePage():
     def __init__(self,driver):
         self.driver=driver
 
-    #打开页面
+    # 打开页面
     def open(self,url):
         self.driver.get(url)
 
-    #id定位
+    # id定位
     def by_id(self,id,time=3):
         return WebDriverWait(self.driver,time,1).until(EC.visibility_of_element_located((By.ID,id)))
 
@@ -36,6 +36,6 @@ class BasePage():
     def by_css(self, css, time=3):
         return WebDriverWait(self.driver, time, 1).until(EC.visibility_of_element_located((By.CSS_SELECTOR, css)))
 
-    #退出网页
+    # 退出网页
     def close(self):
         self.driver.quit()
