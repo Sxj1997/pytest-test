@@ -9,20 +9,20 @@ class BasePage():
     基础Page层,封装一些常用方法
     """
 
-    def __init__(self,driver):
-        self.driver=driver
+    def __init__(self, driver):
+        self.driver = driver
 
     # 打开页面
-    def open(self,url):
+    def open(self, url):
         self.driver.get(url)
 
     # id定位
-    def by_id(self,id,time=3):
-        return WebDriverWait(self.driver,time,1).until(EC.visibility_of_element_located((By.ID,id)))
+    def by_id(self, id, time=3):
+        return WebDriverWait(self.driver, time, 1).until(EC.visibility_of_element_located((By.ID, id)))
 
     # name定位
     def by_name(self, name, time=3):
-        return WebDriverWait(self.driver, time, 1).until(EC.visibility_of_element_located((By.NAME,name)))
+        return WebDriverWait(self.driver, time, 1).until(EC.visibility_of_element_located((By.NAME, name)))
 
     # class定位
     def by_class(self, class_name, time=3):
